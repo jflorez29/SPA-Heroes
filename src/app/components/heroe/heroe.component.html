@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card" >
+        <img class="card-img-top" [src]="heroe.img" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{ heroe.name }}</h5>
+          <p class="card-text">{{ heroe.bio }}</p>
+        </div>
+        <div class="card-footer">
+          <img class="card-img-bottom" [src]="isMarvelOrDc()" alt="Card image cap">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
