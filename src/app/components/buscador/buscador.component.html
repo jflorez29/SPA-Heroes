@@ -1,0 +1,17 @@
+<h1>Héroes de Marvel y DC</h1>
+<hr>
+<div class="alert alert-primary" role="alert" *ngIf="heroes.length == 0">
+  No existen resultados para : {{termino}}
+</div>
+<div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let heroe of heroes; let i = index">
+    <img class="card-img-top img-fluid animated fadeIn" [src]="heroe.img"  [alt]="heroe.nombre">
+    <div class="card-body">
+      <h5 class="card-title">{{ heroe.nombre }}</h5>
+      <p class="card-text">{{ heroe.bio }}</p>
+      <p class="card-text"><small class="text-muted">{{ heroe.aparicion }}</small></p>
+      <button (click)="verHeroe(i)"
+              type="button" class="btn btn-outline-primary btn-block">Ver más</button>
+    </div>
+  </div>
+</div>
